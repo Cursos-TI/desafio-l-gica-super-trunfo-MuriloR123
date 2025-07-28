@@ -49,6 +49,8 @@ int main(){
     printf("PIB per Capita: %.f reais\n", percapita2);
     printf("Poder: %ld\n", poder2);
     printf("\n");
+    printf("Digite a ou b para escolher sua carta\n");
+
         break;
         case '2': 
         printf("1. Escolha as cartas(Digite a primeira letra do código da carta ex:a ou b);\n"); printf("2. Compare as cartas\n");
