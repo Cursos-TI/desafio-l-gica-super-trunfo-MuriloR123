@@ -1,0 +1,182 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char palavra[20];
+    int opcao;
+    int a00;
+    char tur[50];
+    char are[50];
+    char pi[50];
+    char pop[50];
+    char densi[50];
+    char par[50];
+    char pi0[50];
+    char are0[50];
+   char estado[10] = "Acre";
+    char codigo[10] = "A01";
+    float area = 24202;
+    float populacao = 31288;
+    float pib = 356965000;
+    int turismo = 8;
+    char cidade[10] = "Feijó";
+    double densidade1 = populacao / area;
+    double percapita1 = pib / populacao;
+    long int poder1 = area + populacao + pib + turismo + densidade1 + percapita1;
+    char estado2[20] = "Mato Grosso do Sul";
+    char codigo1[20] = "B02";
+    char cidade1[20] = "Campo Grande";
+    float area1 = 8082;
+    double populacao1 = 954537;
+    double pib1 = 34700000000;
+    int turismo1 = 17;
+    double densidade2 = populacao1 / area1;
+    double percapita2 = pib1 / populacao1; 
+    long int poder2 = area1 + populacao1 + pib1 + turismo1 + densidade2 + percapita2;
+    
+    printf("Menu\n"); printf("\n"); printf("Iniciar\n"); printf("Regras e funcionamento\n"); printf("Sair\n"); printf("\n");
+    printf("Escolha o que deseja fazer, utilize apenas letras minúsculas\n");
+    scanf("%20s", palavra);
+    
+    if (strcmp(palavra, "iniciar") == 0) {
+        opcao = 1;} else if (strcmp(palavra, "regras") == 0) {
+        opcao = 2; } else if (strcmp(palavra, "sair") == 0) {
+        opcao = 3;} 
+    
+    scanf("%s", are); 
+    scanf(" %s", pop);
+    scanf(" %s", pi);
+    scanf(" %s", tur);
+    scanf(" %s", par);
+   
+    if (strcmp(par, "comparar") == 0) {
+        a00 = 4;}
+    
+    float valor;
+
+    
+    switch (opcao) {
+        case 1:
+            printf("\n""Você escolheu INICIAR.\n"); 
+        printf("\n""Código da Carta: %s\n", codigo);
+    printf("Estado: %s\n", estado);
+    printf("Cidade: %s\n", cidade);
+    printf("Área: %.f km²\n", area);
+    printf("População: %.f mil habitantes\n", populacao);
+    printf("PIB (Produto Interno Bruto): R$%.f milhões\n", pib);
+    printf("Pontos Turísticos: %.d aproximadamente\n", turismo);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB per Capita: %.f reais\n", percapita1);
+    printf("Poder: %ld\n", poder1);
+    printf("\n");
+    printf("Código da Carta: %s\n", codigo1);
+    printf("Estado: \%s\n", estado2);
+    printf("Cidade: %s\n", cidade1);
+    printf("Área: %.f km²\n", area1);
+    printf("População: %.3f mil habitantes\n", populacao1);
+    printf("PIB (Produto Interno Bruto): R$%.f Bilhões\n", pib1);
+    printf("Pontos Turísticos: %d aproximadamente\n", turismo1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per Capita: %.f reais\n", percapita2);
+    printf("Poder: %ld\n", poder2);
+    printf("\n");
+    printf("Digite o atributo para escolher sua carta (se for nome composto digite tudo sem espaços)\n");
+    
+    
+         if (strcmp(are, "area") == 0) { valor = area; printf("\n"); printf("Escolheu Carta A01: Área \n");   } 
+        else if (strcmp(are, "populacao") == 0) { valor = populacao; printf("\n");  printf("Escolheu Carta A01: População\n");}
+        else if (strcmp(are, "pib") == 0) { valor = pib; printf("\n""Escolheu Carta A01: PIB\n");}
+        else if (strcmp(are, "pontosturisticos") == 0) { valor = turismo;  printf("\n"); printf("Escolheu Carta A01: Pontos Turísticos\n");}
+        else if (strcmp(are, "densidadepopulacional") == 0) {  valor = densidade1; printf("\n"); printf("Escolheu Carta A01: Densidade Populacional\n");}
+        else if (strcmp(are, "pibpercapita") == 0) {  valor = percapita1; printf("\n""Escolheu Carta A01: PIB per Capita\n");}
+        else if (strcmp(are, "poder") == 0) { valor = poder1; printf("\n");  printf("Escolheu Carta A01: Poder\n");}
+        
+         
+        if (strcmp(are, pop) == 0) { printf("Erro: atributo duplicado escolha um diferente.\n");
+                                   } else {
+        if (strcmp(pop, "populacao") == 0) { valor = populacao; printf("Escolheu Carta A01: População\n");    printf("Agora escolha os atributos da segunda carta:\n");}
+        else if (strcmp(pop, "area") == 0) { valor = area;  printf("Escolheu Carta A01: Área\n");  printf("Agora escolha os atributos da segunda carta:\n");}
+        else if (strcmp(pop, "pib") == 0) {  valor = pib; printf("Escolheu Carta A01: PIB\n");  printf("Agora escolha os atributos da segunda carta:\n");}
+        else if (strcmp(pop, "pontosturisticos") == 0) { valor = turismo;  printf("Escolheu Carta A01: Pontos Turísticos\n");  printf("Agora escolha os atributos da segunda carta:\n");}
+        else if (strcmp(pop, "densidadepopulacional") == 0) { valor = densidade1; printf("Escolheu Carta A01: Densidade Populacional\n"); printf("Agora escolha os atributos da segunda carta:\n");}        else if (strcmp(pop, "pibpercapita") == 0) {   printf("Escolheu Carta A01: PIB per Capita\n"); printf("Agora escolha os atributos da segunda carta:\n");}
+        else if (strcmp(pop, "pibpercapita") == 0) {  valor = percapita1; printf("\n""Escolheu Carta A01: PIB per Capita\n");}       
+        else if (strcmp(pop, "poder") == 0) {  valor = poder1; printf("Escolheu Carta A01: Poder\n"); printf("Agora escolha os atributos da segunda carta:\n");}
+        printf("\n");
+        }  
+         
+        
+        if (strcmp(pi, "area02") == 0) { valor = area1; printf("Escolheu Carta B02: Área\n");  }      
+        else if (strcmp(pi, "populacao02") == 0) { valor = populacao1; printf("Escolheu Carta B02: População\n");}
+        else if (strcmp(pi, "pib02") == 0) { valor = pib1; printf("Escolheu Carta B02: PIB\n");}
+        else if (strcmp(pi, "pontosturisticos02") == 0) { valor = turismo1; printf("Escolheu Carta B02: Pontos Turísticos\n");}
+        else if (strcmp(pi, "densidadepopulacional02") == 0) { valor = densidade2;printf("Escolheu Carta B02: Densidade Populacional\n");}
+        else if (strcmp(pi, "pibpercapita02") == 0) { valor = percapita2; printf("Escolheu Carta B02: PIB per Capita\n");}
+        else if (strcmp(pi, "poder02") == 0) { valor = poder2; printf("Escolheu Carta B02: Poder\n");}
+        
+            
+        if (strcmp(tur, pi) == 0)  { printf("Erro: atributo duplicado escolha um diferente.\n"); 
+                                   } else {
+        if(strcmp(tur, "populacao02") == 0) {  valor = populacao1; printf("Escolheu Carta B02: População\n"); printf("\n""Agora escreva > comparar < para comparar os atributos das cartas\n");   }
+        else if (strcmp(tur, "area02") == 0) {  valor = area1; printf("Escolheu Carta B02: Área\n"); printf("\n""Agora escreva > comparar < para comparar os atributos das cartas\n"); }
+        else if (strcmp(tur, "pib02") == 0) {  valor = pib1; printf("Escolheu Carta B02: PIB\n"); printf("\n""Agora escreva > comparar < para comparar os atributos das cartas\n"); }
+        else if (strcmp(tur, "pontosturisticos02") == 0) {  valor = turismo1; printf("Escolheu Carta B02: Pontos Turísticos\n"); printf("\n""Agora escreva > comparar < para comparar os atributos das cartas\n"); }
+        else if (strcmp(tur, "densidadepopulacional02") == 0) {  valor = densidade2; printf("Escolheu Carta B02: Densidade Populacional\n"); printf("\n""Agora escreva > comparar < para comparar os atributos das cartas\n"); }
+        else if (strcmp(tur, "pibpercapita02") == 0) {  valor = percapita2; printf("Escolheu Carta B02: PIB per Capita\n"); printf("\n""Agora escreva > comparar < para comparar os atributos das cartas\n"); }
+        else if (strcmp(tur, "poder02") == 0) {  valor = poder2; printf("Escolheu Carta B02: Poder\n"); printf("\n""Agora escreva > comparar < para comparar os atributos das cartas\n"); }}  
+        
+        switch (a00) {
+            case 4:
+               printf("\n""Comparando...\n"); 
+   
+                double pegar_valor(char atributo[], float area, float populacao, float pib, int turismo, double densidade, double percapita, long int poder) {
+    if (strcmp(atributo, "area") == 0) return area;
+    else if (strcmp(atributo, "populacao") == 0) return populacao;
+    else if (strcmp(atributo, "pib") == 0) return pib;
+    else if (strcmp(atributo, "pontosturisticos") == 0) return turismo;
+    else if (strcmp(atributo, "densidadepopulacional") == 0) return densidade;
+    else if (strcmp(atributo, "pibpercapita") == 0) return percapita;
+    else if (strcmp(atributo, "poder") == 0) return poder;                                                                                                           
+       }
+        double pegar_valor1 (char atributo1[], float area1, float populacao1, float pib1, int turismo1, double densidade2, double percapita2, long int poder2) {
+    if (strcmp(atributo1, "area02") == 0) return area1;
+    else if (strcmp(atributo1, "populacao02") == 0) return populacao1;
+    else if (strcmp(atributo1, "pib02") == 0) return pib1;
+    else if (strcmp(atributo1, "pontosturisticos02") == 0) return turismo1;
+    else if (strcmp(atributo1, "densidadepopulacional02") == 0) return densidade2;
+    else if (strcmp(atributo1, "pibpercapita02") == 0) return percapita2;
+    else if (strcmp(atributo1, "poder02") == 0) return poder2;        
+    }
+    
+double soma_total = 0;
+double soma_total1 = 0;
+
+soma_total += pegar_valor(are, area, populacao, pib, turismo, densidade1, percapita1, poder1);
+soma_total += pegar_valor(pop, area, populacao, pib, turismo, densidade1, percapita1, poder1);
+soma_total1 += pegar_valor1(pi, area1, populacao1, pib1, turismo1, densidade2, percapita2, poder2);
+soma_total1 += pegar_valor1(tur, area1, populacao1, pib1, turismo1, densidade2, percapita2, poder2);
+
+printf("\n>>> Soma total dos atributos escolhidos (carta A01): %.2f\n", soma_total);
+    printf("\n>>> Soma total dos atributos escolhidos (carta B02): %.2f\n", soma_total1);
+
+if (soma_total > soma_total1) { printf("\n"" >>> Carta A01 venceu <<< \n"); }
+if (soma_total < soma_total1) { printf("\n"" >>> Carta B02 venceu <<<  "); }
+        
+}
+        
+            
+            break;
+    
+        case 2:
+            printf("Você escolheu REGRAS\n");
+            printf("1. Escolha as cartas(Digite o atributo da carta(comece pela carta A01))\n"); printf("2. Compare as cartas (digite > comparar <)\n");
+        printf("3. A carta com o maior valor vence;\n");
+
+            break;
+        case 3:
+            printf("Você escolheu SAIR.\n");
+            break;
+
+    }
+
+
+    }
